@@ -17,7 +17,6 @@ namespace Dapper_Project.Models
             Thread t = new Thread();
             t.A = Answers.ReadAll(id);
             t.Q = Questions.Read(id);
-            t.votes = Answers.GetIDs(t.A);
             return t;
         }
 

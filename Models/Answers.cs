@@ -80,7 +80,8 @@ namespace Dapper_Project.Models
                 Posted = DateTime.Now.ToString()
             };
             */
-            db.Update(answers);
+            //db.Update(answers);
+            db.Query($"Update Answers SET Detail='{answers.Detail}' where ID='{answers.ID}'");
         }
 
         public static void Delete(int id)
